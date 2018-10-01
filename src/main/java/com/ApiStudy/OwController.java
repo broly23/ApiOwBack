@@ -32,8 +32,10 @@ public class OwController {
 	/*---HEROES---*/
 	/*------------*/
 	
+	
 	@RequestMapping(value = "/heroes")
-	public String getHeroes(@RequestParam(value="produce", defaultValue="json") String produce) {
+	public String getHeroes(@RequestParam(value="produce", defaultValue="json") String produce) throws Exception {
+		
 		Gson gson = new Gson();
 		List<Hero> heroes = heroConsumer.getHeroes();
 		
